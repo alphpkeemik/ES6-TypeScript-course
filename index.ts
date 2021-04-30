@@ -1,7 +1,6 @@
-function stringLogger(arg:string) {
+function stringLogger(arg: any) {
     console.log(arg)
     return arg
 }
 
-const fooIdentity = stringLogger('foo')
-const oneIdentity = stringLogger(1)
+const fooIdentity: string = stringLogger('foo')
