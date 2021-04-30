@@ -5,6 +5,9 @@ const mockRequest = new Promise((resolve, reject) => {
     }, 1500)
 
 });
+mockRequest.then(() => console.log('Im first'))
+console.log('Im second')
+/*
 (async () => {
     try {
         const response = await mockRequest.then(value => value.split('').reverse().join(''))
@@ -14,4 +17,4 @@ const mockRequest = new Promise((resolve, reject) => {
     }
 
 
-})()
+})()*/
