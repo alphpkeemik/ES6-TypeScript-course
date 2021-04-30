@@ -4,7 +4,7 @@ const createCarObject = (make, model, year, metaKey, metaValue) => {
         model,
         year: year - 2,
         metadata: {
-            [metaKey]: metaValue
+            [`meta:${metaKey}`]: metaValue
         }
     }
 }
