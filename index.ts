@@ -1,5 +1,5 @@
 
-const carFactory =  (make, model, year) => {
+const carFactory =  (make :string, model: string, year: number) => {
     return {
         make,
         model,
