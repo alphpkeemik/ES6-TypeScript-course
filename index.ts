@@ -15,7 +15,16 @@ console.log((() :Car => {
     }
 })())
 
-const shouldNotRetrurn = () : void => {
+const shouldNotRetrurn = (): void => {
     console.log('not returning')
 }
 shouldNotRetrurn()
+
+const arrayOfCars: Array<Car> = [
+    {
+        make: 'Make',
+        model: 'model',
+        colors: [EColor.Black, EColor.Red]
+
+    }
+]
