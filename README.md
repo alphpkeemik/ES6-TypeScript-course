@@ -19,3 +19,6 @@ to call with args
 
     npm init
     npm install -D typescript
+
+
+    npm start
