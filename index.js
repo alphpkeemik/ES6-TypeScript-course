@@ -1,5 +1,5 @@
 const foo = 'foo'
 const bar = 'bar'
-const foobar = `baz`
+const foobar = `${foo} ${bar}`
 
 console.log(foobar)
