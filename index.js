@@ -18,8 +18,7 @@ const person= {
     guid: 'aaa-bbbb-123123123-ccc'
 }
 
-const personLogger = person => {
-    const {password, id, ...otherFields} = person
+const personLogger = ({password, id, ...otherFields}) => {
     console.log(otherFields)
 }
 
