@@ -3,7 +3,7 @@ const orderedFavoriteFruits = ['watermelon', 'avocado', 'cherries', 'bananas', '
 
 const logFruitsThatAreNotFavorite = (fruits) => {
 
-    const [...otherFruits, lastElement] = fruits
+    const [...otherFruits] = fruits
     console.log(otherFruits)
     //console.log(`My second favorite fruit is ${secondFavorite}`)
 }
