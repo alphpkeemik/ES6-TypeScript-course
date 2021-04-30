@@ -1,7 +1,6 @@
+interface WithLength { length: number }
 
-
-
-function logger<Type extends {length: number}>(arg: Type):Type {
+function logger<Type extends WithLength>(arg: Type):Type {
     console.log(arg.length, arg)
     return arg
 }
