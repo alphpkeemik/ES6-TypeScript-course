@@ -5,7 +5,7 @@ function wordLengthClassifier(word) {
     return `I can handle also words in any length`
 }
 
-const newWorldLengthClassifier = word => ({inputWord: word})
+const newWorldLengthClassifier = word => [word]
 
 console.log(newWorldLengthClassifier('bananas'))
 console.log(newWorldLengthClassifier('bananas!'))
