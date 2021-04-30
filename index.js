@@ -11,15 +11,13 @@ const logFavoriteFruit = (fruits) => {
 logFavoriteFruit(orderedFavoriteFruits)*/
 
 
-const fordFocus = {
-    make: 'ford',
-    model: 'focus',
-    year: 2009
+const person = {
+    name: 'John',
+    email: 'john@smith.example.com',
+    password: 'imtheman'
 }
 
-const logCarMake = car => {
-    const {make: manufacturer} = car
-    console.log(`Car make ${manufacturer}`)
+const personLogger = person => {
+    const  {name, email} = person
+    console.log(`${name}, ${email}`)
 }
-
-logCarMake(fordFocus)
