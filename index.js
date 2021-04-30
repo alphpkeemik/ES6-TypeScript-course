@@ -12,7 +12,7 @@ const createCarObject = (make, model = 'focus', year = 2000, loggingFn1 = loggin
         make,
         model,
         year: year - 2,
-        logData: () => loggingFn1(make, model, year)
+        logData: loggingFn1(make, model, year)
     }
 }
 
