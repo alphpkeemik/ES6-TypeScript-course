@@ -15,3 +15,8 @@ console.log((() :Car => {
         colors: [EColor.Black, EColor.Red]
     }
 })())
+
+const shouldNotRetrurn = () : void => {
+    console.log('not returning')
+}
+shouldNotRetrurn()
