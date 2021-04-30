@@ -12,3 +12,10 @@
 to call with args
 
     node . foo bar
+
+
+
+# start typescript
+
+    npm init
+    npm install -D typescript

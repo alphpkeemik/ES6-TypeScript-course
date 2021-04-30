@@ -1,0 +1,28 @@
+{
+  "name": "es6-course",
+  "version": "1.0.0",
+  "description": "ES6 &amp; TypeScript course 30.04.2021",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node .",
+    "prestart": "tsc ./index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alphpkeemik/ES6-TypeScript-course.git"
+  },
+  "keywords": [
+    "typescript",
+    "es6"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alphpkeemik/ES6-TypeScript-course/issues"
+  },
+  "homepage": "https://github.com/alphpkeemik/ES6-TypeScript-course#readme",
+  "devDependencies": {
+    "typescript": "^4.2.4"
+  }
+}
