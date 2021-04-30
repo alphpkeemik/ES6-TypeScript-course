@@ -21,3 +21,8 @@ const getCarInfo = (car: Car) => {
 }
 
 console.log(getCarInfo(car1))
+console.log(getCarInfo({
+    make: 'a',
+    model: 'b',
+    year: 'string'
+}))
