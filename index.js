@@ -18,4 +18,18 @@ const uniqueueFruits = orderedFavoriteFruits.reduce((acc, value, index, array) =
     }
     return acc
 }, [])
-console.log(uniqueueFruits)
+
+const formattedData = orderedFavoriteFruits.reduce((acc, value, index, array) => {
+    if (value.length > 5) {
+        acc.longerNames.push(value)
+    } else {
+        acc.shortNames.push(value)
+    }
+    //return acc
+}, {
+    shortNames: [],
+    longerNames: []
+})
+
+
+console.log(formattedData)
