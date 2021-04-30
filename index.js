@@ -20,12 +20,12 @@ const uniqueueFruits = orderedFavoriteFruits.reduce((acc, value, index, array) =
 }, [])
 
 const formattedData = orderedFavoriteFruits.reduce((acc, value, index, array) => {
-    if (value.length > 5) {
+    if (value.length > 6) {
         acc.longerNames.push(value)
     } else {
         acc.shortNames.push(value)
     }
-    //return acc
+    return acc
 }, {
     shortNames: [],
     longerNames: []
