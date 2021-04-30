@@ -1,13 +1,11 @@
 const orderedFavoriteFruits = ['watermelon', 'avocado', 'cherries']
 
 
-const logSecondFavoriteFruit = (fruits) => {
+const logFruitsThatAreNotFavorite = (fruits) => {
 
-    const [, secondFavorite] = fruits
-    console.log(`My second favorite fruit is ${secondFavorite}`)
+    const [favorite, ...otherFruits] = fruits
+    console.log(otherFruits)
+    //console.log(`My second favorite fruit is ${secondFavorite}`)
 }
-//logSecondFavoriteFruit(orderedFavoriteFruits)
+logFruitsThatAreNotFavorite(orderedFavoriteFruits)
 
-
-const [,,arg1, arg2] = process.argv
-console.log(arg1, arg2)
