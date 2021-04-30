@@ -13,6 +13,6 @@ type TCar = {
     vin: number,
     wheelCount: number
 }
-type TLeanCar = Pick<TCar, 'make'|'model'|'year'>
+type TLeanCar = Omit<TCar, 'vin'|'wheelCount'>
 
 const car: TLeanCar = {make: 'ford', model: 'focus', year: 2006}
