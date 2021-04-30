@@ -8,14 +8,19 @@ const logFruitsThatAreNotFavorite = (fruits) => {
     //console.log(`My second favorite fruit is ${secondFavorite}`)
 }
 //logFruitsThatAreNotFavorite(orderedFavoriteFruits)
+const personTemplate= {
+    name: 'Name not given',
+    email: 'E-mail not given',
+    password: '*****',
+    id: -1,
+    guid: 'aaaaaa-aaaaa-aaaaa-aaaa'
+}
 
 
 const person= {
     name: 'John',
     email: 'smith@example.com',
-    password: '123pass',
-    id: 97,
-    guid: 'aaa-bbbb-123123123-ccc'
+
 }
 
 
@@ -32,4 +37,5 @@ const combinePersonAndAddress = (person, personAddress) => {
         ...personAddress
     }
 }
-console.log(combinePersonAndAddress(person, personAddress))
+//console.log(combinePersonAndAddress(person, personAddress))
+console.log({...personTemplate, ...person})
