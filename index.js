@@ -18,8 +18,8 @@ const fordFocus = {
 }
 
 const logCarMake = car => {
-    const {make} = car
-    console.log(`Car make ${make}`)
+    const {make: manufacturer} = car
+    console.log(`Car make ${manufacturer}`)
 }
 
 logCarMake(fordFocus)
