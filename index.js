@@ -2,9 +2,10 @@ const orderedFavoriteFruits = ['watermelon', 'avocado', 'cherries', 'bananas', '
 
 
 const capitalizeFruits = (fruits) => orderedFavoriteFruits.map((value, index, array) => {
+    const fruitCount = array.length
     const [first, ...characters] = value.split("")
-
-    return `${index+1}: ${first.toUpperCase()}${characters.join('')}`
+    const prefix = index < fruitCount / 2 ? index + 1 : 'runner-up'
+    return `${prefix}: ${first.toUpperCase()}${characters.join('')}`
 })
 
 console.log(capitalizeFruits(orderedFavoriteFruits))
