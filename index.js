@@ -1,24 +1,9 @@
-const prefixWithMeta = key => {
-    return `meta:${key}`
-}
-// single line
-//const prefixWithMeta = key => `meta:${key}`
+const  orderedFavoriteFruits = ['watermelon', 'avocado', 'cherries']
 
-const loggingFn = (make, model, year) => {
-    console.log(`${make} ${model} from ${year}`)
-};
-const createCarObject = (make, model = 'focus', year = 2000, loggingFn1 = loggingFn) => {
-    return {
-        make,
-        model,
-        year: year - 2,
-        logData: () => loggingFn1(make, model, year)
-    }
+const logFavoriteFruit = (fruits) => {
+    const favorite = fruits[0]
+    const secondFavorite = fruits[1]
+    console.log(`My favorite fruit is ${favorite} and second favorite is ${secondFavorite}`)
 }
 
-let car = createCarObject('Ford', 'Ka', 2009);
-car.logData()
-let tesla = createCarObject('Tesla', 'cybertruck', 2020, (make, model, year) => {
-    console.log(`Elon made ${make} ${model} at ${year}`)
-});
-tesla.logData()
+logFavoriteFruit(orderedFavoriteFruits)
