@@ -18,7 +18,7 @@ const fordFocus = {
 }
 
 const logCarMake = car => {
-    const make = car.make
+    const {make} = car
     console.log(`Car make ${make}`)
 }
 
