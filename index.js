@@ -7,4 +7,5 @@ const mockRequest = new Promise((resolve, reject) => {
 })
 
 mockRequest
+    .catch(console.error)
     .then(console.log)
