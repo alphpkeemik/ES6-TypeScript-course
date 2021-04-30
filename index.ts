@@ -2,8 +2,12 @@
 const carFactory =  (make, model, year) => {
     return {
         make,
-        model, year
+        model,
+        year
     }
 }
 
-const car = carFactory('Form')
+const car1 = carFactory('Form', 'focus', 2006)
+console.log(car1)
+const car2 = carFactory(2006, false, 'year')
+console.log(car2)
