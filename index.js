@@ -1,6 +1,5 @@
-const favoriteFruit = Object.freeze({ fruit:'watermelon'})
-{
-    favoriteFruit.fruit = 'avocado'
-}
+const foo = 'foo'
+const bar = 'bar'
+const foobar = foo + bar
 
-console.log(favoriteFruit)
+console.log(foobar)
