@@ -1,4 +1,8 @@
-const newWorldLengthClassifier = word => word.length > 7 && `that's a long word`
+const createCarObject = (make, model, year) => {
+    const car  = {}
+    car.make = make
+    car.model = model
+    car.year = year
+}
 
-console.log(newWorldLengthClassifier('bananas'))
-console.log(newWorldLengthClassifier('bananas!'))
+console.log(createCarObject('Ford', 'Focus', 2006))
