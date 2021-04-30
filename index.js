@@ -1,14 +1,12 @@
-const createCarObject = (make, model, year) => {
+const createCarObject = (make, model, year, metaKey, metaValue) => {
     return {
         make,
         model,
-        year: year - 2
+        year: year - 2,
+        metadata: {
+            [metaKey]: metaValue
+        }
     }
 }
 
-console.log(createCarObject('Ford', 'Focus', 2006))
-
-
-const identity  = (arg) => arg
-console.log(identity(['banana']))
-console.log(createCarObject('Ford', 'Focus', 2006))
+console.log(createCarObject('Ford', 'Focus', 2006, 'spoilerHeight', '20cm'))
