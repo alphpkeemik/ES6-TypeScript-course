@@ -2,38 +2,16 @@ interface Car {
     make: string,
     model: string
     year: number
+    colors: EColor[]
 }
-
-interface CarFactory {
-    (make: string, model: string, year: number): Car
+enum EColor {
+    Red, Black= 'black', Blue = 'blue', Grey = 'grey',
 }
-
-type Vehicle = {
-    pedalCount: number
-}
-
-const carFactory: CarFactory = (make: string, model: string, year: number): Car => {
+console.log((() :Car => {
     return {
-        make,
-        model,
-        year
+        make: 'Make',
+        model: 'model',
+        year: 2005,
+        colors: [EColor.Black, EColor.Red]
     }
-}
-
-const myCarFactory: CarFactory = (make: string, model: string, year: number): Car => {
-    return {
-        make,
-        model,
-        year: year + 1
-    }
-}
-
-const car1 = carFactory('Form', 'focus', 2006)
-const car2 = myCarFactory('Form', 'focus', 2006)
-console.log(car1, car2)
-
-const printVehicleInfo = (vehicle: Car | Vehicle) => {
-    const {make, model, year} = vehicle
-    return `This ${make} ${model} was manufactured in ${year}`
-}
-
+})())

@@ -5,8 +5,8 @@
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node .",
-    "prestart": "tsc ./index.ts"
+    "start": "node index.js",
+    "prestart": "tsc ./index"
   },
   "repository": {
     "type": "git",

@@ -1,24 +1,15 @@
-var carFactory = function (make, model, year) {
+var EColor;
+(function (EColor) {
+    EColor[EColor["Red"] = 0] = "Red";
+    EColor["Black"] = "black";
+    EColor["Blue"] = "blue";
+    EColor["Grey"] = "grey";
+})(EColor || (EColor = {}));
+console.log((function () {
     return {
-        make: make,
-        model: model,
-        year: year
+        make: 'Make',
+        model: 'model',
+        year: 2005,
+        colors: [EColor.Black, EColor.Red]
     };
-};
-var myCarFactory = function (make, model, year) {
-    return {
-        make: make,
-        model: model,
-        year: year + 1
-    };
-};
-var car1 = carFactory('Form', 'focus', 2006);
-var car2 = myCarFactory('Form', 'focus', 2006);
-console.log(car1, car2);
-var printVehicleInfo = function (vehicle) {
-    var make = vehicle.make, model = vehicle.model, year = vehicle.year;
-    return "This " + make + " " + model + " was manufactured in " + year;
-};
-console.log(printVehicleInfo({
-    model: 'model'
-}));
+})());
