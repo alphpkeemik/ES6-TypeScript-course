@@ -22,4 +22,6 @@ const personLogger = ({password, id, ...otherFields}) => {
     console.log(otherFields)
 }
 
-personLogger(person)
+//personLogger(person)
+const makeArray = (... args) =>args
+console.log(makeArray('banana', 'apple', 'strawberry'))
