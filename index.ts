@@ -1,16 +1,15 @@
-interface WithLength { length: number }
+/**
+ * Pick
+ * Omit
+ * Partial
+ * Required
+ * Record
+ */
 
-function logger<Type extends WithLength>(arg: Type):Type {
-    console.log(arg.length, arg)
-    return arg
+type TCar = {
+    make: string,
+    model: string
+    year: number
 }
-const stringLogger = (arg:string) => logger<string>(arg)
-//const intLogger = (arg:number) => logger<number>(arg)
-const arrayLogger = (arg:any[]) => logger<any[]>(arg)
 
-const fooIdentity = logger('foo')
-stringLogger(fooIdentity)
-//const intIdentity = logger(1)
-//intLogger(intIdentity)
-const arrayIdentity = logger(['banana'])
-arrayLogger(arrayIdentity)
+const car: TCar = {make: 'ford', model: 'focus', year: 2006}
