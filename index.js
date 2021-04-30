@@ -1,4 +1,4 @@
-const favoriteFruit = { fruit:'watermelon'}
+const favoriteFruit = Object.freeze({ fruit:'watermelon'})
 {
     favoriteFruit.fruit = 'avocado'
 }
