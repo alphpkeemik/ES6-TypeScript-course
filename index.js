@@ -21,4 +21,4 @@ const personLogger = ({name, email}= {name: 'no name provided', email: 'no email
     console.log(`${name}, ${email}`)
 }
 
-personLogger({name: 'John'})
+personLogger()
