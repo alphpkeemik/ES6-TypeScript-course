@@ -2,7 +2,7 @@ const createCarObject = (make, model, year) => {
     return {
         make,
         model,
-        year
+        year: year - 2
     }
 }
 
