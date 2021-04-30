@@ -15,4 +15,4 @@ const createCarObject = (make, model, year, metaKey, metaValue) => {
     }
 }
 
-console.log(createCarObject('Ford', 'Focus', 2006, 'spoilerHeight', '20cm'))
+console.log(createCarObject('Ford'))
