@@ -1,4 +1,11 @@
-// do in browser console!
-fetch('https://www.metaweather.com/api/location/search/?query=San')
-    .then(response => response.json())
-    .then(console.log)
+const mockRequest = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        //reject(new Error('Oh no, something went wrong'))
+        resolve ('foo')
+    }, 1500)
+
+});
+(async () => {
+    const response = await mockRequest
+    console.log({response})
+})()
