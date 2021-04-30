@@ -19,17 +19,7 @@ const uniqueueFruits = orderedFavoriteFruits.reduce((acc, value, index, array) =
     return acc
 }, [])
 
-const formattedData = orderedFavoriteFruits.reduce((acc, value, index, array) => {
-    if (value.length > 6) {
-        acc.longerNames.push(value)
-    } else {
-        acc.shortNames.push(value)
-    }
-    return acc
-}, {
-    shortNames: [],
-    longerNames: []
-})
+const formattedData = orderedFavoriteFruits.reduce((acc, value, index, array) => value.length > acc ? value.length : acc, 0)
 
 
 console.log(formattedData)
