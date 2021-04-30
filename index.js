@@ -1,5 +1,5 @@
 const mockRequest = new Promise((resolve, reject) => {
-    resolve ('fuu')
+    resolve ('foo')
 })
 
-console.log(mockRequest)
+mockRequest.then(console.log)
