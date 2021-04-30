@@ -19,11 +19,8 @@ const person= {
 }
 
 const personLogger = person => {
-    const {name, email, guid, ...otherFields} = person
-    console.log({
-        name, email, guid
-    })
-    console.log({otherFields})
+    const {password, id, ...otherFields} = person
+    console.log(otherFields)
 }
 
 personLogger(person)
