@@ -1,25 +1,28 @@
-const orderedFavoriteFruits = ['watermelon', 'avocado', 'cherries', 'bananas', 'apples', 'strawberries', 'avocado', 'apples']
+const people = [
+    {
+        name: 'John',
+        email: 'john@example.com',
+        age: 17,
+    },
+    {
+        name: 'Jane',
+        email: 'jane@.example.com',
+        age: 29,
+    },
+    {
+        name: 'Juss',
+        email: 'juss@example.com',
+        age: 63,
+    },
+]
 
 
-const capitalizeFruits = (fruits) => orderedFavoriteFruits.map((value, index, array) => {
-    const fruitCount = array.length
-    const [first, ...characters] = value.split("")
-    const prefix = index < fruitCount / 2 ? index + 1 : 'runner-up'
-    return `${prefix}: ${first.toUpperCase()}${characters.join('')}`
-})
+const detectUnderAgePerson = ({age}, index, array) => {
+    return age<18
+}
 
+const underAgePerson = people.find((value, index, array) => detectUnderAgePerson(value, index, array))
+// or const underAgePerson = people.find((value, index, array) => detectUnderAgePerson(value))
+// or const underAgePerson = people.find(detectUnderAgePerson)
 
-//console.log(capitalizeFruits(orderedFavoriteFruits))
-
-
-const uniqueueFruits = orderedFavoriteFruits.reduce((acc, value, index, array) => {
-    if (acc.indexOf(value) < 0) {
-       acc.push(value)
-    }
-    return acc
-}, [])
-
-const formattedData = orderedFavoriteFruits.reduce((acc, value, index, array) => value.length > acc ? value.length : acc, 0)
-
-
-console.log(formattedData)
+console.log(underAgePerson)
