@@ -15,20 +15,8 @@ const people = [
         age: 63,
     },
 ]
+const [person] = people
 
-
-const detectUnderAgePerson = ({age}, index, array) => {
-    return age < 18
-}
-
-const underAgePerson = people.find((value, index, array) => detectUnderAgePerson(value, index, array))
-// or const underAgePerson = people.find((value, index, array) => detectUnderAgePerson(value))
-// or const underAgePerson = people.find(detectUnderAgePerson)
-
-const everyOneIsOfAge = people.every(({age}) => age >= 18)
-
-
-console.log(people.forEach(person => console.log(person.name)))
-console.log(people.forEach(({name}) => console.log(name)))
-
-
+console.log(Object.keys(person))
+console.log(Object.values(person))
+console.log(Object.entries(person))
