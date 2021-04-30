@@ -1,7 +1,8 @@
 const foo = 'foo'
 const bar = 'bar'
-const foobar = `${foo} ${bar}`
-const oldFoobar = ${foo} +' ' + ${bar}
+const foobar = `${foo}:
+   
+${bar}`
 
 
 console.log(foobar)
