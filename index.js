@@ -6,6 +6,6 @@ const mockRequest = new Promise((resolve, reject) => {
 
 });
 (async () => {
-    const response = await mockRequest
+    const response = await mockRequest.then(value => value.split('').reverse().join(''))
     console.log({response})
 })()
