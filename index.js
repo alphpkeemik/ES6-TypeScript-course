@@ -1,5 +1,8 @@
 const mockRequest = new Promise((resolve, reject) => {
-    resolve ('foo')
+    setTimeout(() => {
+        resolve ('foo')
+    }, 1500)
+
 })
 
 mockRequest.then(console.log)
