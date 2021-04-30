@@ -4,3 +4,4 @@ function stringLogger(arg:string) {
 }
 
 const fooIdentity = stringLogger('foo')
+const oneIdentity = stringLogger(1)
