@@ -1,6 +1,6 @@
-const favoriteFruit = 'watermelon'
+const favoriteFruit = { fruit:'watermelon'}
 {
-    favoriteFruit = 'avocado'
+    favoriteFruit.fruit = 'avocado'
 }
 
 console.log(favoriteFruit)
