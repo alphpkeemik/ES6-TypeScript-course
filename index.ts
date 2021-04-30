@@ -14,5 +14,6 @@ type TCar = {
     wheelCount: number
 }
 type TLeanCar = Omit<TCar, 'vin'|'wheelCount'>
+type TPartialLCar = Partial<TCar>
 
-const car: TLeanCar = {make: 'ford', model: 'focus', year: 2006}
+const car: TPartialLCar = {make: 'ford', model: 'focus', year: 2006}
