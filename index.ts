@@ -10,6 +10,9 @@ type TCar = {
     make: string,
     model: string
     year: number
+    vin: number,
+    wheelCount: number
 }
+type TLeanCar = Pick<TCar, 'make'|'model'|'year'>
 
-const car: TCar = {make: 'ford', model: 'focus', year: 2006}
+const car: TLeanCar = {make: 'ford', model: 'focus', year: 2006}
