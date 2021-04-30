@@ -5,8 +5,9 @@ const mockRequest = new Promise((resolve, reject) => {
     }, 1500)
 
 })
-
+const logger = arg => console.log(arg) || arg
 mockRequest
     .catch(console.error)
-    .then(arg => 'bar')
-    .then(console.log)
+    .then(arg => `bar and ${arg}`)
+    .then(logger)
+    .then(arg => console.log(`I went trough the entire promise chain and all I got was ${arg}`))
