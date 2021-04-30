@@ -7,3 +7,8 @@ const createCarObject = (make, model, year) => {
 }
 
 console.log(createCarObject('Ford', 'Focus', 2006))
+
+
+const identity  = (arg) => arg
+console.log(identity(['banana']))
+console.log(createCarObject('Ford', 'Focus', 2006))
