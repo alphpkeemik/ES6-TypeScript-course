@@ -1,20 +1,29 @@
-const mockRequest = new Promise((resolve, reject) => {
+const mockRequestShort = () => new Promise((resolve, reject) => {
     setTimeout(() => {
-        reject(new Error('Oh no, something went wrong'))
-        resolve ('foo')
+        //reject(new Error('Oh no, something went wrong'))
+        console.log('short')
+        resolve('foo')
+    }, 500)
+});
+const mockRequestMedium = () => new Promise((resolve, reject) => {
+    setTimeout(() => {
+        //reject(new Error('Oh no, something went wrong'))
+        console.log('medium')
+        resolve('foo')
+    }, 1000)
+});
+const mockRequestLong = () => new Promise((resolve, reject) => {
+    setTimeout(() => {
+        //reject(new Error('Oh no, something went wrong'))
+        console.log('long')
+        resolve('foo')
     }, 1500)
 
 });
-mockRequest.then(() => console.log('Im first'))
-console.log('Im second')
-/*
+
 (async () => {
-    try {
-        const response = await mockRequest.then(value => value.split('').reverse().join(''))
-        console.log({response})
-    }catch(e) {
-        console.log('caught an error!')
-    }
+    await mockRequestMedium()
+    await mockRequestShort()
 
 
-})()*/
+})()
