@@ -4,7 +4,11 @@ interface Car {
     year: number
 }
 
-const carFactory = (make: string, model: string, year: number): Car => {
+interface CarFactory {
+    (make: string, model: string, year: number): Car
+}
+
+const carFactory: CarFactory = (make: string, model: string, year: number): Car => {
     return {
         make,
         model,
@@ -12,8 +16,17 @@ const carFactory = (make: string, model: string, year: number): Car => {
     }
 }
 
+const myCarFactory: CarFactory = (make: string, model: string, year: number): Car => {
+    return {
+        make,
+        model,
+        year: year + 1
+    }
+}
+
 const car1 = carFactory('Form', 'focus', 2006)
-//console.log(car1)
+const car2 = myCarFactory('Form', 'focus', 2006)
+console.log(car1, car2)
 
 const getCarInfo = (car: Car) => {
     const {make, model, year} = car
@@ -21,8 +34,3 @@ const getCarInfo = (car: Car) => {
 }
 
 console.log(getCarInfo(car1))
-console.log(getCarInfo({
-    make: 'a',
-    model: 'b',
-    year: 'string'
-}))
