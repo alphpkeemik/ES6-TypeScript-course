@@ -27,6 +27,7 @@ const underAgePerson = people.find((value, index, array) => detectUnderAgePerson
 
 const everyOneIsOfAge = people.every(({age}) => age >= 18)
 
-console.log(everyOneIsOfAge)
+
+console.log(people.some(({age}) => age >= 18))
 
 
