@@ -13,8 +13,12 @@ type TCar = {
     vin?: number,
     wheelCount?: number
 }
-type TLeanCar = Omit<TCar, 'vin'|'wheelCount'>
-const car1: TCar = {make: 'ford', model: 'focus', year: 2006}
-type TRequiredCar = Required<TCar>
 
-const car2: TRequiredCar = {make: 'ford', model: 'focus', year: 2006}
+
+type TSpoilerHeightsByCar = Record<string, number>
+
+const spoilerHeights : TSpoilerHeightsByCar ={
+    focus: 20,
+    ka: -2,
+    6: 'a'
+}
