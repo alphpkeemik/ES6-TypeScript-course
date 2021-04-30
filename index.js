@@ -5,7 +5,7 @@ function wordLengthClassifier(word) {
     return `I can handle also words in any length`
 }
 
-const newWorldLengthClassifier = (word) => {
+const newWorldLengthClassifier = word => {
     if (word.length > 7) {
         return `That's a long word!`
     }
