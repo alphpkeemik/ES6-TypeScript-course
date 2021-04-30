@@ -14,7 +14,7 @@ const mockRequestMedium = () => new Promise((resolve, reject) => {
 });
 const mockRequestLong = () => new Promise((resolve, reject) => {
     setTimeout(() => {
-        //reject(new Error('Oh no, something went wrong'))
+        reject(new Error('Oh no, something went wrong'))
         console.log('long')
         resolve('long-r')
     }, 1500)
@@ -24,7 +24,7 @@ const mockRequestLong = () => new Promise((resolve, reject) => {
 (async () => {
     const [medium, long, short] = await Promise.all([
         mockRequestMedium(),
-        mockRequestLong(),
+        mockRequestLong().catch(arg => 'i failed'),
         mockRequestShort()
     ])
     console.log(medium, long, short)
