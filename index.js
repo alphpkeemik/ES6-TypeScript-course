@@ -17,8 +17,8 @@ const person = {
     password: 'imtheman'
 }
 
-const personLogger = ({name, email}, age) => {
+const personLogger = ({name, email}= {}) => {
     console.log(`${name}, ${email}`)
 }
 
-personLogger(person, 29)
+personLogger()
