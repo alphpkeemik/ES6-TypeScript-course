@@ -1,6 +1,6 @@
-var favoriteFruit = 'watermelon'
+const favoriteFruit = 'watermelon'
 {
-    let favoriteFruit = 'avocado'
+    const favoriteFruit = 'avocado'
 }
 
 console.log(favoriteFruit)
