@@ -17,8 +17,10 @@ const person = {
     password: 'imtheman'
 }
 
-const personLogger = ({name, email}= {name: 'no name provided', email: 'no email provided'}) => {
+let defaultPerson = {name: 'no name provided', email: 'no email provided'};
+const personLogger = (person= defaultPerson) => {
+    const {name, email} = Object.assign(defaultPerson, person)
     console.log(`${name}, ${email}`)
 }
 
-personLogger()
+personLogger({name: 'John'})
