@@ -7,3 +7,8 @@
 # run
 
     node .
+
+
+to call with args
+
+    node . foo bar

@@ -6,8 +6,8 @@ const logSecondFavoriteFruit = (fruits) => {
     const [, secondFavorite] = fruits
     console.log(`My second favorite fruit is ${secondFavorite}`)
 }
-logSecondFavoriteFruit(orderedFavoriteFruits)
+//logSecondFavoriteFruit(orderedFavoriteFruits)
 
 
-const args = process.argv
-console.log(args)
+const [,,arg1, arg2] = process.argv
+console.log(arg1, arg2)
