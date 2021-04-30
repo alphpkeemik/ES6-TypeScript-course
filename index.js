@@ -18,10 +18,17 @@ const person= {
     guid: 'aaa-bbbb-123123123-ccc'
 }
 
-const personLogger = ({password, id, ...otherFields}) => {
-    console.log(otherFields)
+
+const personAddress = {
+    street: 'Ravi',
+    house: '2',
+    postalCode: '10203',
 }
 
-//personLogger(person)
-const makeArray = (... args) =>args
-console.log(makeArray('banana', 'apple', 'strawberry'))
+const combinePersonAndAddress = (person, personAddress) => {
+    return {
+        ...person,
+        ...personAddress
+    }
+}
+console.log(combinePersonAndAddress(person, personAddress))
