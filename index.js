@@ -4,16 +4,16 @@ const prefixWithMeta = key => {
 // single line
 //const prefixWithMeta = key => `meta:${key}`
 
-const createCarObject = (make, model = 'focus', year = 2000, metaKey, metaValue) => {
+const createCarObject = (make, model = 'focus', year = 2000) => {
     return {
         make,
         model,
         year: year - 2,
-        metadata: {
-            [prefixWithMeta(metaKey)]: metaValue
+        logData: () => {
+            console.log(`${make} ${model} from ${year}`)
         }
     }
 }
 
-console.log(createCarObject('Ford'))
-console.log(createCarObject('Ford', 'ka'))
+let car = createCarObject('Ford', 'Ka', 2009);
+car.logData()
